@@ -1,0 +1,49 @@
+services:
+  nginx:
+    restart: no
+
+  app:
+    depends_on:
+      - redis
+      - postgres
+    restart: no
+
+  horizon:
+    depends_on:
+      - redis
+      - postgres
+    restart: no
+
+  scheduler:
+    depends_on:
+      - redis
+      - postgres
+    restart: no
+
+  swagger:
+    restart: no
+
+  redis:
+    restart: no
+
+  postgres:
+    container_name: anomaly_postgres
+    build:
+      context: docker/postgres
+    volumes:
+      - anomaly_psql_db_volume:/var/lib/postgresql/data
+    ports:
+      - ${POSTGRES_PORT}:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      POSTGRES_MULTIPLE_DATABASES: ${POSTGRES_MULTIPLE_DATABASES}
+      TZ: ${POSTGRES_TIMEZONE}
+    networks:
+      - backend
+    restart: no
+
+volumes:
+  anomaly_psql_db_volume:
+    external: true
