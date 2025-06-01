@@ -27,11 +27,11 @@ services:
     restart: no
 
   postgres:
-    container_name: anomaly_postgres
+    container_name: nebus_postgres
     build:
       context: docker/postgres
     volumes:
-      - anomaly_psql_db_volume:/var/lib/postgresql/data
+      - nebus_psql_db_volume:/var/lib/postgresql/data
     ports:
       - ${POSTGRES_PORT}:5432
     environment:
@@ -45,5 +45,5 @@ services:
     restart: no
 
 volumes:
-  anomaly_psql_db_volume:
+  nebus_psql_db_volume:
     external: true

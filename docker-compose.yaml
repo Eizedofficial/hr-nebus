@@ -1,6 +1,6 @@
 services:
   nginx:
-    container_name: anomaly_squad_nginx
+    container_name: nebus_nginx
     image: nginx:1.27.4-alpine
     volumes:
       - ./src:/var/www
@@ -28,7 +28,7 @@ services:
     restart: always
 
   app:
-    container_name: anomaly_squad_app
+    container_name: nebus_app
     build:
       context: docker/app
       args:
@@ -59,7 +59,7 @@ services:
     restart: always
 
   swagger:
-    container_name: anomaly_squad_swagger
+    container_name: nebus_swagger
     image: swaggerapi/swagger-ui:v5.19.0
     ports:
       - ${SWAGGER_PORT}:8080
@@ -88,7 +88,7 @@ services:
     restart: always
 
   redis:
-    container_name: anomaly_squad_redis
+    container_name: nebus_redis
     image: redis:7.4.2
     command:
       - 'redis-server'
