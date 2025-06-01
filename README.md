@@ -9,8 +9,8 @@
 3. `cp src/.env.example src/.env`
 4. `docker volume create nebus_psql_db_volume`
 5. `docker-compose up -d`
-6. `docker-compose exec php composer i`
-7. `docker-compose exec php app artisan key:generate`
+6. `docker-compose exec app composer i`
+7. `docker-compose exec app php artisan key:generate`
 
 ## Laravel Ide Helper
 
