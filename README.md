@@ -11,6 +11,7 @@
 5. `docker-compose up -d`
 6. `docker-compose exec app composer i`
 7. `docker-compose exec app php artisan key:generate`
+8. `docker-compose exec app php artisan scribe:generate`
 
 ## Laravel Ide Helper
 
