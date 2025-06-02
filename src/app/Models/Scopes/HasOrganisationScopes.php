@@ -10,7 +10,7 @@ trait HasOrganisationScopes
 {
     public function scopeOfActivity(Builder $query, int $activityId): Builder
     {
-        return $query->whereRelation('activities', 'id', $activityId);
+        return $query->whereRelation('activities', 'activities.id', $activityId);
     }
 
     public function scopeOfNestedActivity(Organisation|Builder $query, int $parentActivityId): Builder
