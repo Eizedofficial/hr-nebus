@@ -483,9 +483,12 @@ You can switch the language used with the tabs at the top right (or from the nav
                 </div>
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">filter</div>
-                                            <span class="sl-truncate sl-text-muted">object[]</span>
+                                            <span class="sl-truncate sl-text-muted">string[]</span>
                                     </div>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Массив для фильтрации</p>
+        </div>
                                     </div>
 </div>
 
@@ -500,6 +503,9 @@ You can switch the language used with the tabs at the top right (or from the nav
                                             <span class="sl-truncate sl-text-muted">string</span>
                                     </div>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Фильтрация по названию компании</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -523,7 +529,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the buildings table.</p>
+            <p>Фильтрация по ID здания</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -548,7 +554,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the activities table.</p>
+            <p>Фильтрация по ID вида деятельности</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -568,12 +574,12 @@ You can switch the language used with the tabs at the top right (or from the nav
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">nested_activity</div>
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">nested_activity_id</div>
                                             <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
                                     </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the activities table.</p>
+            <p>Фильтрация по ID вида деятельности с вложенностью</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -602,9 +608,12 @@ You can switch the language used with the tabs at the top right (or from the nav
                 </div>
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">rectangle_area</div>
-                                            <span class="sl-truncate sl-text-muted">object[]</span>
+                                            <span class="sl-truncate sl-text-muted">string[]</span>
                                     </div>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Фильтрация по прямоугольной области</p>
+        </div>
                                     </div>
 </div>
 
@@ -618,9 +627,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">lon</div>
                                             <span class="sl-truncate sl-text-muted">number</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Долгота</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -642,9 +652,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">lat</div>
                                             <span class="sl-truncate sl-text-muted">number</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Широта</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -666,9 +677,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">radius</div>
                                             <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Сторона области</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -698,9 +710,12 @@ You can switch the language used with the tabs at the top right (or from the nav
                 </div>
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">circle_area</div>
-                                            <span class="sl-truncate sl-text-muted">object[]</span>
+                                            <span class="sl-truncate sl-text-muted">string[]</span>
                                     </div>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Фильтрация по радиусу</p>
+        </div>
                                     </div>
 </div>
 
@@ -714,9 +729,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">lon</div>
                                             <span class="sl-truncate sl-text-muted">number</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Долгота</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -738,9 +754,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">lat</div>
                                             <span class="sl-truncate sl-text-muted">number</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Широта</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -762,9 +779,10 @@ You can switch the language used with the tabs at the top right (or from the nav
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">radius</div>
                                             <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
                                     </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Радиус области</p>
+        </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
@@ -867,28 +885,22 @@ You can switch the language used with the tabs at the top right (or from the nav
                                      id="json-body-GETapi-organisations-search"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "filter": [
-        {
-            "name": "architecto",
-            "building_id": 16,
-            "activity_id": 16,
-            "nested_activity": 16,
-            "rectangle_area": [
-                {
-                    "lon": 4326.41688,
-                    "lat": 4326.41688,
-                    "radius": 16
-                }
-            ],
-            "circle_area": [
-                {
-                    "lon": 4326.41688,
-                    "lat": 4326.41688,
-                    "radius": 16
-                }
-            ]
+    "filter": {
+        "name": "architecto",
+        "building_id": 16,
+        "activity_id": 16,
+        "nested_activity_id": 16,
+        "rectangle_area": {
+            "lon": 4326.41688,
+            "lat": 4326.41688,
+            "radius": 16
+        },
+        "circle_area": {
+            "lon": 4326.41688,
+            "lat": 4326.41688,
+            "radius": 16
         }
-    ]
+    }
 }</div>
                             </div>
                                             </div>
@@ -986,10 +998,6 @@ You can check the Dev Tools console for debugging information.</p>
     --data "{
     \"filter\": [
         {
-            \"name\": \"architecto\",
-            \"building_id\": 16,
-            \"activity_id\": 16,
-            \"nested_activity\": 16,
             \"rectangle_area\": [
                 {
                     \"lon\": 4326.41688,
@@ -1026,10 +1034,6 @@ const headers = {
 let body = {
     "filter": [
         {
-            "name": "architecto",
-            "building_id": 16,
-            "activity_id": 16,
-            "nested_activity": 16,
             "rectangle_area": [
                 {
                     "lon": 4326.41688,
