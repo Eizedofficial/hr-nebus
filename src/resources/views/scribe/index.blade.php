@@ -382,7 +382,9 @@
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).&lt;/aside&gt;</code></pre>
 
                 <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is not authenticated.</p>
+<p>To authenticate requests, include a query parameter <strong><code>api_key</code></strong> in the request.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
             </div>
         </div>
 
@@ -1084,7 +1086,7 @@ fetch(url, {
                                                         class="example-response-GETapi-organisations-search-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-organisations-search', event.target.value);">
-                                                                                                            <option value="0">400</option>
+                                                                                                            <option value="0">401</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -1131,7 +1133,7 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Requested filter(s) `0` are not allowed. Allowed filter(s) are `name, building_id, activity_id, nested_activity_id, rectangle_area, circle_area`.&quot;
+    &quot;message&quot;: &quot;Wrong api key&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -1471,7 +1473,7 @@ fetch(url, {
                                                         class="example-response-GETapi-organisations--organisation_id--toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-organisations--organisation_id-', event.target.value);">
-                                                                                                            <option value="0">200</option>
+                                                                                                            <option value="0">401</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -1518,62 +1520,7 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Stehr-Jacobi&quot;,
-        &quot;building&quot;: {
-            &quot;id&quot;: 12,
-            &quot;address&quot;: &quot;48815 Lorenza Mall\nLilabury, IL 42307-5591&quot;,
-            &quot;longitude&quot;: &quot;90.53323&quot;,
-            &quot;latitude&quot;: &quot;-41.00997&quot;
-        },
-        &quot;activities&quot;: [
-            {
-                &quot;id&quot;: 21,
-                &quot;name&quot;: &quot;ipsam&quot;,
-                &quot;_lft&quot;: 57,
-                &quot;_rgt&quot;: 64
-            },
-            {
-                &quot;id&quot;: 3,
-                &quot;name&quot;: &quot;omnis&quot;,
-                &quot;_lft&quot;: 67,
-                &quot;_rgt&quot;: 90
-            },
-            {
-                &quot;id&quot;: 71,
-                &quot;name&quot;: &quot;non&quot;,
-                &quot;_lft&quot;: 133,
-                &quot;_rgt&quot;: 138
-            },
-            {
-                &quot;id&quot;: 84,
-                &quot;name&quot;: &quot;aut&quot;,
-                &quot;_lft&quot;: 165,
-                &quot;_rgt&quot;: 178
-            },
-            {
-                &quot;id&quot;: 102,
-                &quot;name&quot;: &quot;dicta&quot;,
-                &quot;_lft&quot;: 198,
-                &quot;_rgt&quot;: 199
-            }
-        ],
-        &quot;phone_numbers&quot;: [
-            {
-                &quot;id&quot;: 1,
-                &quot;value&quot;: &quot;+1.551.922.5470&quot;
-            },
-            {
-                &quot;id&quot;: 2,
-                &quot;value&quot;: &quot;+1 (458) 668-9448&quot;
-            },
-            {
-                &quot;id&quot;: 3,
-                &quot;value&quot;: &quot;(820) 328-4398&quot;
-            }
-        ]
-    }
+    &quot;message&quot;: &quot;Wrong api key&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
