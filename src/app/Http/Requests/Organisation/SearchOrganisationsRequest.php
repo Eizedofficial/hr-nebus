@@ -37,7 +37,7 @@ class SearchOrganisationsRequest extends FormRequest
             'filter.*.circle_area' => ['sometimes', 'array'],
             'filter.*.circle_area.*.lon' => ['required', 'numeric'],
             'filter.*.circle_area.*.lat' => ['required', 'numeric'],
-            'filter.*.circle_area.*.radius' => ['required', 'int']
+            'filter.*.circle_area.*.radius' => ['required', 'int'],
         ];
     }
 }

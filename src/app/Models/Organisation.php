@@ -24,4 +24,10 @@ class Organisation extends Model
         'name',
         'building_id'
     ];
+
+    protected $with = [
+        'phoneNumbers',
+        'activities',
+        'building'
+    ];
 }

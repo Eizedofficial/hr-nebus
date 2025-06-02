@@ -7,13 +7,13 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class ActivityResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->whenHas('id'),
+            'name' => $this->whenHas('name'),
+            '_lft' => $this->whenHas('_lft'),
+            '_rgt' => $this->whenHas('_rgt')
+        ];
     }
 }

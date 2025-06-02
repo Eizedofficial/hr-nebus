@@ -7,7 +7,6 @@ use App\Filters\OrganisationRectangleAreaFilter;
 use App\Models\Organisation;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\QueryBuilder\AllowedFilter;
-use Spatie\QueryBuilder\AllowedInclude;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class OrganisationQuery extends QueryBuilder
@@ -30,9 +29,6 @@ class OrganisationQuery extends QueryBuilder
                 ),
                 AllowedFilter::custom('rectangle_area', new OrganisationRectangleAreaFilter),
                 AllowedFilter::custom('circle_area', new OrganisationCircleAreaFilter)
-            ])
-            ->allowedIncludes([
-                AllowedInclude::relationship('building'),
             ]);
     }
 }
