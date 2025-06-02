@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Kalnoy\Nestedset\NestedSet;
 
 return new class extends Migration
 {
@@ -11,11 +12,7 @@ return new class extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('parent_id')
-                ->nullable()
-                ->constrained('activities')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+            NestedSet::columns($table);
             $table->timestamps();
         });
     }

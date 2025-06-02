@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Akuechler\Geoly;
 use App\Models\Relations\HasBuildingRelations;
 use Database\Factories\BuildingFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,7 +17,8 @@ class Building extends Model
     /** @use HasFactory<BuildingFactory> */
     use HasFactory,
         SoftDeletes,
-        HasBuildingRelations;
+        HasBuildingRelations,
+        Geoly;
 
     protected $fillable = [
         'address',

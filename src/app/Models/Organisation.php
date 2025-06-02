@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Relations\HasOrganisationRelations;
+use App\Models\Scopes\HasOrganisationScopes;
 use Database\Factories\OrganisationFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,7 +17,8 @@ class Organisation extends Model
     /** @use HasFactory<OrganisationFactory> */
     use HasFactory,
         SoftDeletes,
-        HasOrganisationRelations;
+        HasOrganisationRelations,
+        HasOrganisationScopes;
 
     protected $fillable = [
         'name',

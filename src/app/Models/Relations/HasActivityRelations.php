@@ -2,18 +2,13 @@
 
 namespace App\Models\Relations;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Organisation;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 trait HasActivityRelations
 {
-    public function parent(): BelongsTo
+    public function organisations(): BelongsToMany
     {
-        return $this->belongsTo(self::class, 'parent_id');
-    }
-
-    public function children(): HasMany
-    {
-        return $this->hasMany(self::class, 'parent_id');
+        return $this->belongsToMany(Organisation::class);
     }
 }
