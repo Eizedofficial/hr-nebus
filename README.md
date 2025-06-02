@@ -2,8 +2,6 @@
 
 > ***Note:*** You should fill UID and GID in the docker .env file.
 
-> ***Note:*** Remove horizon and scheduler from docker-compose.override.yaml if you don't need it
-
 1. `cp docker-compose.override.yaml.example docker-compose.override.yaml`
 2. `cp .env.example .env`
 3. `cp src/.env.example src/.env`

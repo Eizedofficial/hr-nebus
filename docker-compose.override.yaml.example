@@ -8,18 +8,6 @@ services:
       - postgres
     restart: no
 
-  horizon:
-    depends_on:
-      - redis
-      - postgres
-    restart: no
-
-  scheduler:
-    depends_on:
-      - redis
-      - postgres
-    restart: no
-
   swagger:
     restart: no
 
