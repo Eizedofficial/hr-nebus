@@ -19,13 +19,13 @@ class OrganisationQuery extends QueryBuilder
         $this
             ->allowedFilters([
                 AllowedFilter::partial('name'),
-                AllowedFilter::belongsTo('building'),
+                AllowedFilter::belongsTo('building_id', 'building'),
                 AllowedFilter::callback(
-                    'activity',
+                    'activity_id',
                     fn(Organisation|Builder $query, $id) => $query->ofActivity($id),
                 ),
                 AllowedFilter::callback(
-                    'nested_activity',
+                    'nested_activity_id',
                     fn(Organisation|Builder $query, $id) => $query->ofNestedActivity($id),
                 ),
                 AllowedFilter::custom('rectangle_area', new OrganisationRectangleAreaFilter),

@@ -2,3 +2,5 @@
 .env
 .storage
 docker-compose.override.yaml
+src/.scribe
+src/public/vendor
