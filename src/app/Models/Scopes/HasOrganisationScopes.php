@@ -16,10 +16,11 @@ trait HasOrganisationScopes
     public function scopeOfNestedActivity(Organisation|Builder $query, int $parentActivityId): Builder
     {
         return $query->whereHas(
-            'activities',
-            function (Activity|Builder $subquery) use ($parentActivityId) {
-                $subquery->ofParent($parentActivityId);
-            }
-        );
+                'activities',
+                function (Activity|Builder $subquery) use ($parentActivityId) {
+                    $subquery->ofParent($parentActivityId);
+                }
+            )
+            ->orWhereRelation('activities', 'activities.id', $parentActivityId);
     }
 }
