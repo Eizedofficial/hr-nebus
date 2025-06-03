@@ -16,6 +16,7 @@ class OrganisationQuery extends QueryBuilder
         parent::__construct(Organisation::query());
 
         $this
+            ->defaultSort('id')
             ->allowedFilters([
                 AllowedFilter::partial('name'),
                 AllowedFilter::belongsTo('building_id', 'building'),
