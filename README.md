@@ -1,29 +1,52 @@
-## Installation
+## Установка и запуск
 
-> ***Note:*** You should fill UID and GID in the docker .env file.
+### Выполните команды 
 
 1. `cp docker-compose.override.yaml.example docker-compose.override.yaml`
 2. `cp .env.example .env`
 3. `cp src/.env.example src/.env`
 4. `docker volume create nebus_psql_db_volume`
-5. `docker-compose up -d`
+5. `docker-compose up -d` - Запустить 2 раза, т.к. я пишу на Windows, а windows вставляет
+в файлы свои системные символы, которые ломают скрипт инициализации Postgres при первом запуске. 
+Пока так и не решил эту проблему
 6. `docker-compose exec app composer i`
 7. `docker-compose exec app php artisan key:generate`
-8. `docker-compose exec app php artisan scribe:generate`
 
-## Laravel Ide Helper
+### Заполнение базы тестовыми данными
+`docker-compose exec app php artisan migrate --seed`
 
+### Генерация документации
+`docker-compose exec app php artisan scribe:generate`
+
+Документация будет доступна по `localhost:8080/docs`
+
+## Отправка запросов
+
+### Авторизация запросов
+
+Для авторизации нужно вставить статический API ключ в запрос. Статический ключ можно настроить в 
+`src/.env`, переменная `APP_API_KEY`. Значение по умолчанию - `itsakey`
+
+### Фильтрация выборок
+
+Вся информация продублирована в документации к запросам, сюда выведена для удобства проверяющего
+
+Для фильтрации выборок была использована библиотека [Spatie Laravel Query Builder](https://spatie.be/docs/laravel-query-builder/)
+
+Все фильтры должны находиться в массиве filter в body параметрах запроса. Пример body для фильтрации по квадратной области
 ```
-php artisan ide-helper:generate
-php artisan ide-helper:meta
-php artisan ide-helper:models --write-mixin --nowrite
+{
+	"api_key": "itsakey",
+	"filter": {
+		"rectangle_area": {
+			"lat": 56.838131,
+			"lon": 60.597232,
+			"radius": 1300
+		}
+	}
+}
 ```
 
-## Testing
-
-```shell
-composer test
-```
 
 ## Задание
 
